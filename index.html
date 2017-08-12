@@ -2,7 +2,7 @@
 <html>
 <meta charset="UTF-8">
 <head>
-<link rel='icon' href='resources/img/tex/dirt.png' sizes='16x16 32x32 64x64 128x128' type='image/png' id="favicon"/>
+<!--<link rel='icon' href='resources/img/tex/dirt.png' sizes='16x16 32x32 64x64 128x128' type='image/png' id="favicon"/>-->
 <title>
 FPS: THE GAME -- THE MOVIE!!!!
 </title>
@@ -23,13 +23,24 @@ img,canvas,.canvas,#canvas {
 	image-rendering:pixelated;                 /* CSS4 Proposed  */
 	-ms-interpolation-mode:nearest-neighbor;   /* IE8+           */
 }
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
 </style>
 
-
+<script src="http://cdn.peerjs.com/0.3/peer.js"></script>
 
 </head>
 <body>
 <div>
+
+<div>My ID: <input id="myid" type="text" size="20"></div><br/>
 
 <div id="tartarusfire_game_container_FPS_THE_GAME____THE_MOVIE____">
 <canvas id="canvas" class="canvas" width="800" height="600" oncontextmenu="">
@@ -39,7 +50,15 @@ Your browser does not support <b>HTML5 Canvas</b>
 
 </div>
 
-<script src="game.js"></script>
+
+<div style="position:absolute;top:0;left:0;width:100%;height:100%;" id="lock">
+<p>Player1 Code:<input type="text" size="50" id="id0"/></p></br>
+<p>Player2 Code:<input type="text" size="50" id="id1"/></p></br>
+<p>Validate Session:<input type="button" value="START!" id="validate"/></p></br>
+</div>
+
+
+<script src="res/game.js"></script>
 
 
 </body>
